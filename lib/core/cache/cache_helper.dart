@@ -30,10 +30,6 @@ class CacheHelper {
     return _sharedPreferences.get(key);
   }
 
-  bool containsKey(String key) {
-    return _sharedPreferences.containsKey(key);
-  }
-
   Future<bool> removeData({required String key}) async {
     return await _sharedPreferences.remove(key);
   }
@@ -49,11 +45,6 @@ class CacheHelper {
 
   Future<String?> getSecuredData({required String key}) async {
     return await _secureStorage.read(key: key);
-  }
-
-  Future<bool> containsSecuredKey(String key) async {
-    final value = await _secureStorage.read(key: key);
-    return value != null;
   }
 
   Future<void> removeSecuredData({required String key}) async {
