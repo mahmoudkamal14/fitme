@@ -16,7 +16,7 @@ class OnBoardingScreen extends StatelessWidget {
       create: (context) => OnboardingCubit(),
       child: Scaffold(
         backgroundColor: Color(0xFFF7F8FA), // Match original background color
-        body: BlocBuilder<OnboardingCubit, onboardingState>(
+        body: BlocBuilder<OnboardingCubit, OnboardingState>(
           builder: (context, state) {
             final cubit = OnboardingCubit.get(context);
             if (state is OnboardingLoading) {

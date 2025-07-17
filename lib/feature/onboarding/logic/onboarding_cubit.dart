@@ -5,7 +5,7 @@ import '../model/onborading_model.dart';
 import '../services/services.dart';
 import 'onboarding_state.dart';
 
-class OnboardingCubit extends Cubit<onboardingState> {
+class OnboardingCubit extends Cubit<OnboardingState> {
   final OnboardingService _service = OnboardingService();
   final PageController _pageController = PageController();
 

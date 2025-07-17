@@ -1,23 +1,23 @@
-abstract class onboardingState {}
+abstract class OnboardingState {}
 
-class OnboardingInitial extends onboardingState {}
+class OnboardingInitial extends OnboardingState {}
 
-class OnboardingLoading extends onboardingState {}
+class OnboardingLoading extends OnboardingState {}
 
-class OnboardingLoaded extends onboardingState {}
+class OnboardingLoaded extends OnboardingState {}
 
-class OnboardingPageChanged extends onboardingState {
-final int index;
+class OnboardingPageChanged extends OnboardingState {
+  final int index;
 
-OnboardingPageChanged(this.index);
+  OnboardingPageChanged(this.index);
 }
 
-class OnboardingCompleting extends onboardingState {}
+class OnboardingCompleting extends OnboardingState {}
 
-class OnboardingCompleted extends onboardingState {}
+class OnboardingCompleted extends OnboardingState {}
 
-class OnboardingError extends onboardingState {
-final String message;
+class OnboardingError extends OnboardingState {
+  final String message;
 
-OnboardingError(this.message);
+  OnboardingError(this.message);
 }
