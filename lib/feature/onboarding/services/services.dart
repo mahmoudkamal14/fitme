@@ -14,7 +14,7 @@ class OnboardingService {
       OnboardingModel(
         title: "Find the best\nfashion style for you",
         description:
-        "Get exclusive limited apparel that only you have! Made by famous brands.",
+        "Get ex clusive limited apparel that only you have! Made by famous brands.",
         imagePath: "assets/1.jpg",
         backgroundColor: Colors.white,
       ),
