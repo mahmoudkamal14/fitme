@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +17,7 @@ class OnBoardingScreen extends StatelessWidget {
       create: (context) => OnboardingCubit(),
       child: Scaffold(
         backgroundColor: Color(0xFFF7F8FA), // Match original background color
-        body: BlocBuilder<OnboardingCubit, onboardingState> (
+        body: BlocBuilder<OnboardingCubit, onboardingState>(
           builder: (context, state) {
             final cubit = OnboardingCubit.get(context);
             if (state is OnboardingLoading) {
