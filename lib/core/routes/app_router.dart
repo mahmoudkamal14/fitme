@@ -1,4 +1,5 @@
 import 'package:fitme/core/routes/routes.dart';
+import 'package:fitme/feature/auth/presentation/screen/login_screen.dart';
 import 'package:fitme/feature/onboarding/screens/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,8 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(builder: (_) => OnBoardingScreen());
+      case Routes.loginScreen:
+        return MaterialPageRoute(builder: (_) => LoginScreen());
     }
     return null;
   }

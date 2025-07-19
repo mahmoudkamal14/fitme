@@ -35,7 +35,7 @@ class OnboardingFooterWidget extends StatelessWidget {
           SizedBox(height: 30.h),
           SizedBox(
             width: double.infinity,
-            height: 48.h,
+            height: 56.h,
             child: ElevatedButton(
               onPressed:
                   cubit.isCompleting

@@ -7,7 +7,7 @@ import 'onboarding_state.dart';
 
 class OnboardingCubit extends Cubit<OnboardingState> {
   final OnboardingService _service = OnboardingService();
-  final PageController _pageController = PageController();
+  final PageController pageController = PageController();
 
   List<OnboardingModel> onboardingItems = [];
   int currentIndex = 0;
@@ -19,7 +19,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
 
   static OnboardingCubit get(context) => BlocProvider.of(context);
 
-  PageController get pageController => _pageController;
+  // PageController get pageController => _pageController;
 
   bool get isLastPage => currentIndex == onboardingItems.length - 1;
 
@@ -36,7 +36,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
 
   void nextPage() {
     if (currentIndex < onboardingItems.length - 1) {
-      _pageController.nextPage(
+      pageController.nextPage(
         duration: Duration(milliseconds: 300),
         curve: Curves.easeInOut,
       );
@@ -44,7 +44,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
   }
 
   void skipToLastPage() {
-    _pageController.animateToPage(
+    pageController.animateToPage(
       onboardingItems.length - 1,
       duration: Duration(milliseconds: 400),
       curve: Curves.easeInOut,
@@ -66,7 +66,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
 
   @override
   Future<void> close() {
-    _pageController.dispose();
+    pageController.dispose();
     return super.close();
   }
 }
