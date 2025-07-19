@@ -2,7 +2,6 @@ import 'package:fitme/app/logic/app_cubit.dart';
 import 'package:fitme/app/logic/app_state.dart';
 import 'package:fitme/core/routes/app_router.dart';
 import 'package:fitme/core/routes/routes.dart';
-import 'package:fitme/core/theme/dark_theme.dart';
 import 'package:fitme/core/theme/light_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,7 +26,7 @@ class FitmeApp extends StatelessWidget {
                 initialRoute: Routes.onBoardingScreen,
                 onGenerateRoute: appRouter.onGenerateRoute,
                 theme: lightTheme,
-                darkTheme: darkTheme,
+                darkTheme: lightTheme,
                 themeMode: AppCubit.get(context).getThemeMode(),
               );
             },

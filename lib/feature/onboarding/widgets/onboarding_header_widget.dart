@@ -11,16 +11,8 @@ class OnboardingHeaderWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 15.h),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Text(
-            '  ', // Fixed to show page number
-            style: TextStyle(
-              fontSize: 14.sp,
-              color: Colors.grey[600],
-              fontWeight: FontWeight.w500,
-            ),
-          ),
           if (!cubit.isLastPage)
             Container(
               width: 40.w,

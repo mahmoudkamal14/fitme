@@ -61,84 +61,44 @@ class _OnboardingPageWidgetState extends State<OnboardingPageWidget>
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color:
-          widget
-              .model
-              .backgroundColor, // Uses Color(0xFFF7F8FA) from OnboardingModel
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ScaleTransition(
+      color: widget.model.backgroundColor,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: ScaleTransition(
               scale: _scaleAnimation,
               child: FadeTransition(
                 opacity: _fadeAnimation,
-                child: Container(
-                  width: 280.w,
-                  height: 350.h,
-                  decoration: BoxDecoration(
-                    color:
-                        widget
-                            .model
-                            .backgroundColor, // Match OnboardingModel background
-                    borderRadius: BorderRadius.circular(16.r),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
-                        blurRadius: 20.r,
-                        offset: Offset(0, 10.h),
-                      ),
-                    ],
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(16.r),
-                    child: Image.asset(
-                      widget.model.imagePath,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
+                child: Image.asset(widget.model.imagePath, fit: BoxFit.contain),
               ),
             ),
-            SizedBox(height: 40.h),
-            SlideTransition(
-              position: _slideAnimation,
-              child: FadeTransition(
-                opacity: _fadeAnimation,
-                child: Text(
-                  widget.model.title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87,
-                    height: 1.3,
-                  ),
-                ),
+          ),
+          SizedBox(height: 20.h),
+          SlideTransition(
+            position: _slideAnimation,
+            child: FadeTransition(
+              opacity: _fadeAnimation,
+              child: Text(
+                widget.model.title,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ),
-            SizedBox(height: 16.h),
-            SlideTransition(
-              position: _slideAnimation,
-              child: FadeTransition(
-                opacity: _fadeAnimation,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20.w),
-                  child: Text(
-                    widget.model.description,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 15.sp,
-                      color: Colors.grey[600],
-                      height: 1.5,
-                    ),
-                  ),
-                ),
+          ),
+          SizedBox(height: 20.h),
+          SlideTransition(
+            position: _slideAnimation,
+            child: FadeTransition(
+              opacity: _fadeAnimation,
+              child: Text(
+                widget.model.description,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

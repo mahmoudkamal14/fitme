@@ -15,21 +15,21 @@ class OnboardingService {
         title: "Find the best\nfashion style for you",
         description:
             "Get ex clusive limited apparel that only you have! Made by famous brands.",
-        imagePath: "assets/1.jpg",
+        imagePath: "assets/images/onboarding_one.jpg",
         backgroundColor: Colors.white,
       ),
       OnboardingModel(
         title: "Define yourself in\nyour unique way",
         description:
             "Get exclusive limited apparel that only you have! Made by famous brands.",
-        imagePath: "assets/2.jpg",
+        imagePath: "assets/images/onboardingtwo.jpg",
         backgroundColor: Colors.white,
       ),
       OnboardingModel(
         title: "Start discover your\nunique fashion style",
         description:
             "Get exclusive limited apparel that only you have! Made by famous brands.",
-        imagePath: "assets/3.jpg",
+        imagePath: "assets/images/onboardingthree.jpg",
         backgroundColor: Colors.white,
       ),
     ];

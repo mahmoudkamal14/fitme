@@ -86,14 +86,24 @@ ThemeData lightTheme = ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
-      backgroundColor: WidgetStateProperty.all(const Color(0xFF103A69)),
+      backgroundColor: WidgetStateProperty.all(const Color(0xFF638285)),
       foregroundColor: WidgetStateProperty.all(Colors.white),
-      overlayColor: WidgetStateProperty.all(const Color(0xFF082A4F)),
+      overlayColor: WidgetStateProperty.all(const Color(0xFF638285)),
+      elevation: WidgetStatePropertyAll(0),
+      textStyle: WidgetStatePropertyAll(
+        TextStyle(
+          color: Colors.white,
+          fontSize: 16.sp,
+          fontFamily: 'Poppins',
+          fontWeight: FontWeight.w400,
+          height: 0,
+        ),
+      ),
       shape: WidgetStateProperty.all(
-        RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       ),
       padding: WidgetStateProperty.all(
-        EdgeInsets.symmetric(vertical: 14.h, horizontal: 24.w),
+        EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
       ),
     ),
   ),
@@ -105,13 +115,29 @@ ThemeData lightTheme = ThemeData(
   hintColor: Colors.black,
   secondaryHeaderColor: const Color(0xffFFFEEE),
   inputDecorationTheme: InputDecorationTheme(
+    suffixIconColor: Color(0xFF638285),
+    prefixIconColor: Color(0xFF638285),
+    hintStyle: TextStyle(
+      color: const Color(0xFF9F9D9A),
+      fontSize: 16.sp,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w400,
+      height: 0,
+    ),
+    helperStyle: TextStyle(
+      color: const Color(0xFF0F1314),
+      fontSize: 16,
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w400,
+    ),
     contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+    fillColor: Color(0x0C9F9E9A),
     focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: const Color(0xFF2C2C2E), width: 1.3.w),
+      borderSide: BorderSide(color: const Color(0xFF638285), width: 1.3.w),
       borderRadius: BorderRadius.circular(16),
     ),
     enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: const Color(0xFF2C2C2E), width: 1.3.w),
+      borderSide: BorderSide(color: const Color(0xFF638285), width: 1.3.w),
       borderRadius: BorderRadius.circular(16),
     ),
     errorBorder: OutlineInputBorder(
