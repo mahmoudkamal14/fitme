@@ -1,3 +1,4 @@
+import 'package:fitme/feature/auth/presentation/widgets/login_bloc_listener.dart';
 import 'package:fitme/feature/auth/presentation/widgets/login_form_widget.dart';
 import 'package:fitme/feature/auth/presentation/widgets/login_social_media_widget.dart';
 import 'package:fitme/feature/auth/presentation/widgets/login_welcome_message_widget.dart';
@@ -11,20 +12,24 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w),
-          child: Column(
-            spacing: 30.h,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              LoginWelcomeMessageWidget(),
-              LoginFormWidget(),
-              OrLoginWithWidget(),
-              LoginSocialMediaWidget(),
-              RegisterTextWidget(),
-            ],
+    return LoginBlocListener(
+      child: Scaffold(
+        body: SafeArea(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
+            child: SingleChildScrollView(
+              child: Column(
+                spacing: 30.h,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  LoginWelcomeMessageWidget(),
+                  LoginFormWidget(),
+                  OrLoginWithWidget(),
+                  LoginSocialMediaWidget(),
+                  RegisterTextWidget(),
+                ],
+              ),
+            ),
           ),
         ),
       ),
