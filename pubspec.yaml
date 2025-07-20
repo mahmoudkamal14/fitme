@@ -8,13 +8,20 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
+  build_runner: ^2.4.15
   cupertino_icons: ^1.0.8
+  dio: ^5.8.0+1
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
   flutter_screenutil: ^5.9.3
   flutter_secure_storage: ^9.2.2
   flutter_svg: ^2.2.0
+  get_it: ^8.0.3
+  json_annotation: ^4.9.0
+  json_serializable: ^6.9.4
+  retrofit: ^4.4.2
+  retrofit_generator: ^9.1.9
   shared_preferences: ^2.3.0
 
 dev_dependencies:
