@@ -1,3 +1,5 @@
+import 'package:fitme/core/helper/utils/extentions.dart';
+import 'package:fitme/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 class RegisterTextWidget extends StatelessWidget {
@@ -9,7 +11,7 @@ class RegisterTextWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'First time here? ',
+          'First time here?',
           style: TextStyle(
             color: const Color(0xFF0F1314),
             fontSize: 18,
@@ -18,9 +20,11 @@ class RegisterTextWidget extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            context.navigateTo(Routes.registerScreen);
+          },
           child: Text(
-            'Signup',
+            'Register',
             style: TextStyle(
               color: const Color(0xFF638285),
               fontSize: 18,

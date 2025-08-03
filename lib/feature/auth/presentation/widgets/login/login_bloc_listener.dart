@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:fitme/core/helper/utils/extentions.dart';
 import 'package:fitme/core/routes/routes.dart';
 import 'package:fitme/feature/auth/data/datasource/auth_dependency.dart';
@@ -18,7 +20,10 @@ class LoginBlocListener extends StatelessWidget {
       child: BlocListener<LoginCubit, LoginState>(
         listener: (context, state) {
           if (state is LoginSuccesState) {
+            log('Login successful');
             context.navigateAndReplace(Routes.homeScreen);
+          } else if (state is LoginErrorState) {
+            log('Login failed: ${state.message}');
           }
         },
         child: child,

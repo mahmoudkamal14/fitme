@@ -10,13 +10,13 @@ ThemeData lightTheme = ThemeData(
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.light,
     ),
-    backgroundColor: Colors.white,
+    backgroundColor: const Color(0xFF638285),
     elevation: 0,
     actionsIconTheme: const IconThemeData(color: Color(0xFF0F1314)),
-    iconTheme: const IconThemeData(color: Color(0xFF0F1314)),
+    iconTheme: const IconThemeData(color: Colors.white),
     titleTextStyle: TextStyle(
-      color: Color(0xFF0F1314),
-      fontSize: 22.sp,
+      color: Colors.white,
+      fontSize: 24.sp,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w700,
       height: 0,
@@ -132,6 +132,7 @@ ThemeData lightTheme = ThemeData(
     ),
     contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
     fillColor: Color(0x0C9F9E9A),
+
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: const Color(0xFF638285), width: 1.3.w),
       borderRadius: BorderRadius.circular(16),

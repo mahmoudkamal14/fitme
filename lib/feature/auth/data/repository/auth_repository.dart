@@ -18,5 +18,5 @@ class AuthRepository {
     } catch (e) {
       return ApiResult.failure(e.toString());
     }
-  } // 50 10 2
+  }
 }

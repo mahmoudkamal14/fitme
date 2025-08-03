@@ -1,9 +1,9 @@
-import 'package:fitme/feature/auth/presentation/widgets/login_bloc_listener.dart';
-import 'package:fitme/feature/auth/presentation/widgets/login_form_widget.dart';
+import 'package:fitme/feature/auth/presentation/widgets/login/login_bloc_listener.dart';
+import 'package:fitme/feature/auth/presentation/widgets/login/login_form_widget.dart';
+import 'package:fitme/feature/auth/presentation/widgets/login/register_text_widget.dart';
 import 'package:fitme/feature/auth/presentation/widgets/login_social_media_widget.dart';
-import 'package:fitme/feature/auth/presentation/widgets/login_welcome_message_widget.dart';
+import 'package:fitme/feature/auth/presentation/widgets/login/login_welcome_message_widget.dart';
 import 'package:fitme/feature/auth/presentation/widgets/or_login_with_widget.dart';
-import 'package:fitme/feature/auth/presentation/widgets/register_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
