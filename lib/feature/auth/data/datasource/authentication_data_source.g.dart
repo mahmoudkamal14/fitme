@@ -10,7 +10,7 @@ part of 'authentication_data_source.dart';
 
 class _AuthenticationDataSource implements AuthenticationDataSource {
   _AuthenticationDataSource(this._dio, {this.baseUrl, this.errorLogger}) {
-    baseUrl ??= 'http://mentorea.runasp.net';
+    baseUrl ??= 'http://fitme.runasp.net';
   }
 
   final Dio _dio;
@@ -30,7 +30,7 @@ class _AuthenticationDataSource implements AuthenticationDataSource {
       Options(method: 'POST', headers: _headers, extra: _extra)
           .compose(
             _dio.options,
-            '/Auth/login',
+            '/Auth',
             queryParameters: queryParameters,
             data: _data,
           )

@@ -106,6 +106,7 @@ ThemeData darkTheme = ThemeData(
   secondaryHeaderColor: const Color(0xffFFFEEE),
   inputDecorationTheme: InputDecorationTheme(
     contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 16.h),
+    fillColor: Color(0x0C9F9E9A),
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(color: const Color(0xFF2C2C2E), width: 1.3.w),
       borderRadius: BorderRadius.circular(16),

@@ -1,5 +1,7 @@
 import 'package:fitme/app/logic/app_cubit.dart';
 import 'package:fitme/app/logic/app_state.dart';
+import 'package:fitme/core/cache/cache_helper.dart';
+import 'package:fitme/core/cache/cache_helper_key.dart';
 import 'package:fitme/core/routes/app_router.dart';
 import 'package:fitme/core/routes/routes.dart';
 import 'package:fitme/core/theme/light_mode.dart';
@@ -23,7 +25,7 @@ class FitmeApp extends StatelessWidget {
             builder: (context, child) {
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                initialRoute: Routes.onBoardingScreen,
+                initialRoute: startRoute(),
                 onGenerateRoute: appRouter.onGenerateRoute,
                 theme: lightTheme,
                 darkTheme: lightTheme,
@@ -34,5 +36,14 @@ class FitmeApp extends StatelessWidget {
         },
       ),
     );
+  }
+
+  String startRoute() {
+    var onBoarding = CacheHelper().getData(key: CacheHelperKey.isOnBoarding);
+    if (onBoarding == true) {
+      return Routes.loginScreen;
+    } else {
+      return Routes.onBoardingScreen;
+    }
   }
 }

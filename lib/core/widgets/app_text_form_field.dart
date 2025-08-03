@@ -21,7 +21,7 @@ class AppTextFormField extends StatelessWidget {
     this.onChanged,
   });
 
-  final Icon? suffixIcon;
+  final Widget? suffixIcon;
   final Icon? prefixIcon;
   final String? hintText;
   final bool? isObscureText;
@@ -58,6 +58,9 @@ class AppTextFormField extends StatelessWidget {
         suffixIcon: suffixIcon,
         prefixIcon: prefixIcon,
       ),
+      validator: (value) {
+        return validator!(value);
+      },
     );
   }
 }
