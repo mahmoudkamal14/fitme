@@ -14,7 +14,3 @@ void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(FitmeApp(appRouter: AppRouter()));
 }
-
-// 1. Git 
-
-// 
