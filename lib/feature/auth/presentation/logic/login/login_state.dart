@@ -11,3 +11,13 @@ final class LoginErrorState extends LoginState {
 
   LoginErrorState({required this.message});
 }
+
+final class LoginWithGoogleLoadingState extends LoginState {}
+
+final class LoginWithGoogleSuccesState extends LoginState {}
+
+final class LoginWithGoogleErrorState extends LoginState {
+  final String message;
+
+  LoginWithGoogleErrorState({required this.message});
+}

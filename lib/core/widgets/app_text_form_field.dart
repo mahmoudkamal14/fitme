@@ -47,6 +47,7 @@ class AppTextFormField extends StatelessWidget {
       enabled: enabled ?? true,
       onChanged: onChanged,
       readOnly: readOnly ?? false,
+      obscureText: isObscureText ?? false,
       decoration: InputDecoration(
         contentPadding: Theme.of(context).inputDecorationTheme.contentPadding,
         focusedBorder: Theme.of(context).inputDecorationTheme.focusedBorder,

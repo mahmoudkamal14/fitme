@@ -40,7 +40,13 @@ class FitmeApp extends StatelessWidget {
 
   String startRoute() {
     var onBoarding = CacheHelper().getData(key: CacheHelperKey.isOnBoarding);
-    if (onBoarding == true) {
+    var isLoggedIn = CacheHelper().getData(key: CacheHelperKey.isLoggedIn);
+
+    if (isLoggedIn == true) {
+      return Routes.navBarScreen;
+    } else if (isLoggedIn == false) {
+      return Routes.loginScreen;
+    } else if (onBoarding == true) {
       return Routes.loginScreen;
     } else {
       return Routes.onBoardingScreen;
