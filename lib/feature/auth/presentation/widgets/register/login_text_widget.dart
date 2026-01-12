@@ -21,7 +21,7 @@ class LoginTextWidget extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            context.navigateTo(Routes.loginScreen);
+            context.navigateAndRemoveUntil(Routes.loginScreen);
           },
           child: Text(
             'Login',

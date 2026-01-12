@@ -3,17 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class PinCodeVerification extends StatefulWidget {
-  const PinCodeVerification({super.key, this.verifyOTP, this.resendOTP});
+  const PinCodeVerification({
+    super.key,
+    this.verifyOTP,
+    this.resendOTP,
+    required this.otpCodeController,
+    required this.isLoading,
+  });
 
   final void Function()? verifyOTP;
   final void Function()? resendOTP;
+  final bool isLoading;
+  final TextEditingController otpCodeController;
 
   @override
   State<PinCodeVerification> createState() => _PinCodeVerificationState();
 }
 
 class _PinCodeVerificationState extends State<PinCodeVerification> {
-  TextEditingController otpCodeController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   bool hasError = false;
   String currentText = "";
@@ -36,7 +43,8 @@ class _PinCodeVerificationState extends State<PinCodeVerification> {
                 animationType: AnimationType.fade,
                 cursorColor: Colors.black,
                 animationDuration: const Duration(milliseconds: 300),
-                controller: otpCodeController,
+                controller: widget.otpCodeController,
+                errorTextSpace: 40,
                 pinTheme: PinTheme(
                   shape: PinCodeFieldShape.box,
                   borderRadius: BorderRadius.circular(5),
@@ -75,12 +83,14 @@ class _PinCodeVerificationState extends State<PinCodeVerification> {
                       widget.verifyOTP!.call();
                     }
                   },
-                  child: Text(
-                    'Verify',
-                    style: Theme.of(
-                      context,
-                    ).textTheme.titleSmall!.copyWith(color: Colors.white),
-                  ),
+                  child:
+                      widget.isLoading == true
+                          ? CircularProgressIndicator()
+                          : Text(
+                            'Verify',
+                            style: Theme.of(context).textTheme.titleSmall!
+                                .copyWith(color: Colors.white),
+                          ),
                 ),
               ),
               SizedBox(height: 22),

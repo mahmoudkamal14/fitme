@@ -7,4 +7,5 @@ class Routes {
   static const String forgotPasswordOTPScreen = '/forgotPasswordOTPScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
   static const String homeScreen = '/homeScreen';
+  static const String navBarScreen = '/navBarScreen';
 }

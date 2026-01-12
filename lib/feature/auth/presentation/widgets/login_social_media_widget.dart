@@ -1,3 +1,4 @@
+import 'package:fitme/feature/auth/presentation/logic/login/login_cubit.dart';
 import 'package:fitme/feature/auth/presentation/widgets/custom_social_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,7 +13,11 @@ class LoginSocialMediaWidget extends StatelessWidget {
         CustomSocialWidget(
           imagePath: 'assets/icons/google.svg',
           text: 'Login with Google',
-          onTap: () {},
+          onTap: () {
+            // Implement Google login functionality here
+            print('Google login tapped');
+            LoginCubit.get(context).loginWithGoogle();
+          },
         ),
         SizedBox(height: 10.h),
         CustomSocialWidget(
